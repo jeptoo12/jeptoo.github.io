@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LEARNING  JAVA</title>
+</head>
+<body>
+    <!-- HELLO THERE -->
+
+    <p id="p1">HELLO THERE</p>
+
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = ''; // Initialize variable c
+        document.write(c); // Outputs: ''
+        
+        var l = 10;
+        var w = 20;
+        var q = ''; // Initialize variable q
+        var area = l * w; // Calculate area 
+        document.write(area); // 
+        
+        // Output text using document.write
+        document.write("<h1>1. Learning JavaScript</h1>");
+        
+        // Function to output text
+        function hello() {
+            document.write("Hello there");
+        }
+        
+        // Change paragraph content
+        document.getElementById("p1").innerHTML = "Replaced paragraph";
+    </script>
+
+    <!-- Buttons to call JavaScript function -->
+    <button id="btn1" onclick="hello()">Click here</button>
+    <button id="btn2" onmouseenter="hello()">Enter your name</button>
+    
+    <!-- Correctly placed content -->
+    <h1>EMPLOYEE SALARY CALCULATOR</h1>
+    <label>Enter hourly rate:</label>
+    <label for="hoursworked"> Enter hoursworked:</label>
+    <input type="number"id="hoursworked"place holder="hours" step="0.01"><br></body>
+    <button onclick="calculatesalary"()">calculatesalary</button>
+    <style>
+        h1 {
+            color: rgb(119, 0, 255);
+        }
+        table, th, td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        th {
+            background-color: hsl(317, 76%, 38%);
+        }
+    </style>
+    <table>
+        <tr>
+            <th>description</th>
+            <th>amount</th>
+        </tr>
+        <tr>
+            <td>basic salary</td>
+            <td id>="grossSalary"></td>
+        </tr>
+        <tr>
+            <td>income tax(30%)</td>
+            <td id="income tax"></td>
+        </tr>
+        <tr>
+            <h1>Employee Salary Calculator</h1>
+
+            <label for="hourlyRate">Enter Hourly Rate: </label>
+            <input type="number" id="hourlyRate" name="hourlyRate"><br><br>
+            
+            <label for="lunchAllowance">Enter Lunch Allowance: </label>
+            <input type="number" id="lunchAllowance" name="lunchAllowance"><br><br>
+            
+            <label for="hoursWorked">Enter Hours Worked: </label>
+            <input type="number" id="hoursWorked" name="hoursWorked"><br><br>
+            
+            <button onclick="calculateSalary()">Calculate Salary</button>
+            
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Basic Salary</td>
+                    <td id="basicSalary"></td>
+                </tr>
+                <tr>
+                    <td>Gross Salary</td>
+                    <td id="grossSalary"></td>
+                </tr>
+                <tr>
+                    <td>Income Tax (30%)</td>
+                    <td id="incomeTax"></td>
+                </tr>
+                <tr>
+                    <td>Net Pay</td>
+                    <td id="netPay"></td>
+                </tr>
+            </table>
+            
+            <script>
+                function calculateSalary() {
+                    var hourlyRate = document.getElementById('hourlyRate').value;
+                    var lunchAllowance = document.getElementById('lunchAllowance').value;
+                    var hoursWorked = document.getElementById('hoursWorked').value;
+                    
+                    var basicSalary = hourlyRate * hoursWorked;
+                    var grossSalary = basicSalary + parseFloat(lunchAllowance);
+                    var incomeTax = grossSalary * 0.3;
+                    var netPay = grossSalary - incomeTax;
+            
+                    document.getElementById('basicSalary').innerText = basicSalary.toFixed(2);
+                    document.getElementById('grossSalary').innerText = grossSalary.toFixed(2);
+                    document.getElementById('incomeTax').innerText = incomeTax.toFixed(2);
+                    document.getElementById('netPay').innerText = netPay.toFixed(2);
+                }
+            </script>
+            
+            </body>
+            </html>    
+</body>
+</html>
